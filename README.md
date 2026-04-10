@@ -27,4 +27,4 @@ Recreated the Crypko anime character generation webpage as a UI clone task.
 - JavaScript
 
 ## Live Demo
-[Click here to view](https://your-deployed-link.netlify.app)
+[Click here to view](https://ieee-manit.netlify.app/)
