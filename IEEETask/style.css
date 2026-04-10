@@ -1,0 +1,424 @@
+*,*::after,*::before{
+padding: 0;
+margin: 0;
+}
+body{
+    background-color: rgb(176, 175, 175);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.main{
+    background-color: #e8e4d4;
+    border-radius: 15px;
+    border: solid 12px black;
+    width: 1100px;
+    height: 600px;
+    margin: 40px;
+}
+nav{
+    background-color: black;
+    border-radius: 8px;
+    width: 40%;
+    height: 5%;
+    position: fixed;
+    left: 30%;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+nav a::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+nav a:hover::after{
+    transform: scaleX(1);
+}
+span{
+    color: black;
+    font-size: 27px;
+    font-weight: 600;
+    position: fixed;
+    top: 8%;
+    left: 18%;
+    font-family: sans-serif;
+}
+.join{
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid black;
+    color: black;
+    padding: 10px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 9%;
+    right: 18%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.join:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+}
+h1{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 820;
+    font-size: 60px;
+    text-align: left;
+    margin-top: 125px;
+    margin-left: 35px;
+}
+.animebottom{
+    margin-top: 20px;
+    margin-left: 40px;
+    border-radius: 35px;
+}
+.create{
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 45px;
+    height: 65px;
+    background-color: yellow;
+    font-size: 10.5px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: fixed;
+    bottom: 29%;
+    left: 39%;
+    font-weight: 900;
+    transition: transform 0.3s;
+}
+.create:hover{
+    background-color: rgb(163, 163, 19);
+    transform: scaleX(1.06) scaleY(1.03);
+}
+
+.right-card {
+    position: fixed;
+    top: 23%;
+    right: 23%;
+    width: 155px;
+    height: 220px;
+    border: 3px solid black;
+    border-radius: 14px;
+    overflow: hidden;
+    background: black;
+}
+.right-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+.yellow-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 100%;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+.star-icon {
+    font-size: 9px;
+    color: black;
+    position: static;
+    font-weight: 900;
+}
+.arrow-icon {
+    font-size: 12px;
+    color: black;
+    position: static;
+    font-weight: 900;
+}
+
+.circle-badge {
+    position: fixed;
+    top: 38%;
+    left: 47%;
+    width: 130px;
+    height: 130px;
+}
+.circle-svg {
+    width: 130px;
+    height: 130px;
+    animation: spinCircle 12s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@keyframes spinCircle {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+.start-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d4e600;
+    border: 2px solid black;
+    font-size: 8.5px;
+    font-weight: 900;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+}
+.start-btn:hover {
+    background-color: #bfd000;
+}
+
+.info-card {
+    position: fixed;
+    bottom: 12%;
+    right: 19%;
+    width: 280px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+}
+.info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.info-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+}
+.dots {
+    display: flex;
+    gap: 3px;
+}
+.dots span {
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+    display: block;
+    position: static;
+    font-size: 0;
+}
+.info-desc {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.app-btns {
+    display: flex;
+    gap: 6px;
+}
+.app-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.download-btn {
+    border: 1.5px solid black;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.download-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        align-items: flex-start;
+        min-height: 100vh;
+    }
+
+    .main {
+        width: 95vw;
+        height: auto;
+        min-height: unset;
+        margin: 10px auto;
+        border: solid 6px black;
+        border-radius: 12px;
+        padding-bottom: 24px;
+        overflow: visible;
+    }
+
+    
+    nav {
+        position: relative;
+        left: auto;
+        width: 100%;
+        height: auto;
+        border-radius: 0 0 10px 10px;
+        padding: 10px 0 8px 0;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 14px;
+        padding: 0 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+
+    span {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: block;
+        font-size: 20px;
+        padding: 10px 14px 0 14px;
+    }
+
+    
+    .join {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: block;
+        margin: 8px auto;
+        padding: 7px 20px;
+        font-size: 12px;
+        width: fit-content;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-top: 16px;
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .animebottom {
+        display: block;
+        width: 85% !important;
+        margin: 14px auto 0 auto;
+        border-radius: 20px;
+    }
+
+    
+    .create {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        display: block;
+        margin: 12px auto;
+        width: 55px;
+        height: 60px;
+        font-size: 9.5px;
+    }
+
+    
+    .right-card {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 140px;
+        height: 195px;
+        margin: 14px auto;
+        border-radius: 12px;
+    }
+
+    
+    .circle-badge {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 14px auto;
+        width: 110px;
+        height: 110px;
+    }
+
+    .circle-svg {
+        width: 110px;
+        height: 110px;
+    }
+
+    .start-btn {
+        width: 52px;
+        height: 52px;
+        font-size: 7.5px;
+    }
+
+    
+    .info-card {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 88%;
+        margin: 14px auto 0 auto;
+        padding: 12px 14px;
+    }
+
+    .info-title {
+        font-size: 10px;
+    }
+
+    .info-desc {
+        font-size: 10px;
+    }
+
+    .download-btn {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+}
